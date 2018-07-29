@@ -1,0 +1,21 @@
+<a href="/user/add">Add User</a>
+<table border="1">
+    <tr>
+        <td>Username</td>
+        <td>Firstname</td>
+        <td>Lastname</td>
+        <td>Action</td>
+    </tr>
+    <% users.forEach(function(item) { %>
+    <tr>
+        <td><%= item.username %></td>
+        <td><%= item.firstname %></td>
+        <td><%= item.lastname %></td>
+        <td>
+            <a href="/users/update/<%= item._id %>">Update</a>
+            <a href="/users/delete/<%= item._id %>">Delete</a>
+        </td>
+    </tr>
+
+   <% }) %>
+</table>
